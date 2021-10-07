@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="#e7f5ee" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calc.MainPage" HeightRequest="1200" WidthRequest="700" Title="Калькулятор Xamarin">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="CornerRadius" Value="15"/>
+                <Setter Property="FontSize" Value="35"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="BackgroundColor" Value="#005c55"/>
+            </Style>
+        </ResourceDictionary>
+        </ContentPage.Resources>
+
+    <Grid BackgroundColor="#e7f5ee" RowSpacing="0" ColumnSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="gridUp" Grid.Row="0">
+            <Label x:Name="myLabel" Text="0" FontSize="24" HorizontalOptions="StartAndExpand"
+                   TextColor="#24a319" HeightRequest="100"></Label>
+            <Label x:Name="myEntry" Text=""  VerticalOptions="EndAndExpand"
+                   HorizontalOptions="EndAndExpand" 
+                   FontSize="32" TextColor="#14671c"/>
+        </Grid>
+     
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Button x:Name="buttonOneDel" Text="&lt;-" Clicked="buttonOneDel_Clicked" Grid.Row="0" Grid.Column="0"></Button>
+                <Button x:Name="buttonC" Text="C" Clicked="buttonC_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                <Button x:Name="buttonCE" Text="CE" Clicked="buttonCE_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+                <Button x:Name="buttonP" Text="+" Clicked="buttonP_Clicked" Grid.Row="0" Grid.Column="3"></Button>
+
+                <Button x:Name="button1" Text="1" Clicked="button1_Clicked" Grid.Row="1" Grid.Column="0"></Button>
+                <Button x:Name="button2" Text="2" Clicked="button2_Clicked" Grid.Row="1" Grid.Column="1"></Button>
+                <Button x:Name="button3" Text="3" Clicked="button3_Clicked" Grid.Row="1" Grid.Column="2"></Button>
+                <Button x:Name="buttonM" Text="-" Clicked="buttonM_Clicked" Grid.Row="1" Grid.Column="3"></Button>
+
+                <Button x:Name="button4" Text="4" Clicked="button4_Clicked" Grid.Row="2" Grid.Column="0"></Button>
+                <Button x:Name="button5" Text="5" Clicked="button5_Clicked" Grid.Row="2" Grid.Column="1"></Button>
+                <Button x:Name="button6" Text="6" Clicked="button6_Clicked" Grid.Row="2" Grid.Column="2"></Button>
+                <Button x:Name="buttonU" Text="*" Clicked="buttonU_Clicked" Grid.Row="2" Grid.Column="3"></Button>
+
+                <Button x:Name="buttonPM" Text="+/-" Clicked="buttonPM_Clicked" Grid.Row="3" Grid.Column="0"></Button>
+                <Button x:Name="button0" Text="0" Clicked="button0_Clicked" Grid.Row="3" Grid.Column="1"></Button>
+                <Button x:Name="buttonDot" Text="," Clicked="buttonDot_Clicked" Grid.Row="3" Grid.Column="2"></Button>
+                <Button x:Name="buttonR" Text="=" Clicked="buttonR_Clicked" Grid.Row="3" Grid.Column="3"></Button>
+            </Grid>
+
+
+    </Grid>
+    
+
+</ContentPage>

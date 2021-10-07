@@ -1,0 +1,1 @@
+C:\Users\Evil\source\repos\Calc\Calc\Calc.UWP\Calc.UWP.csproj;x86
